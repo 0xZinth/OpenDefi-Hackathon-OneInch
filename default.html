@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+
+<html>  
+   <head> 
+      <meta charset = "utf-8"> 
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <title>1Inch Quote Analysis</title> 
+       
+   </head> 
+  
+   <body>
+    <h1> 1Inch Quote Data analysis </h1>
+    With Gas: <input type="checkbox" id="gasCheck" onclick="setGasAndRefresh()">
+    <div class="headerrow">
+        <div class="headercol1">
+          <canvas id="allSpreadsChart" width="150" height="75"></canvas>
+        </div>
+        <div class="headercol2">
+        <canvas id="sizeSpreadChart" width="150" height="150" ></canvas>
+        </div>
+    </div>
+      <div class="tab">
+        <button class="tablinks" onclick="openChain(event, 'Ethereum')">Ethereum</button>
+        <button class="tablinks" onclick="openChain(event, 'Optimism')">Optimism</button>
+        <button class="tablinks" onclick="openChain(event, 'Binance')">Binance</button>
+        <button class="tablinks" onclick="openChain(event, 'Polygon')">Polygon</button>
+      </div>
+      
+      <div id="Ethereum" class="tabcontent">
+        <canvas id="ethSpreadsChart" width="150" height="75"></canvas>
+        <h2>Adjusted for Gas</h2>
+        <canvas id="ethGasSpreadsChart" width="150" height="75"></canvas>
+    </div>
+      
+      <div id="Optimism" class="tabcontent">
+        <canvas id="optSpreadsChart" width="150" height="75"></canvas>
+        <h2>Adjusted for Gas</h2>
+        <canvas id="optGasSpreadsChart" width="150" height="75"></canvas>
+      </div>
+      
+      <div id="Binance" class="tabcontent">
+        <canvas id="binSpreadsChart" width="150" height="75"></canvas>
+        <h2>Adjusted for Gas</h2>
+        <canvas id="binGasSpreadsChart" width="150" height="75"></canvas>
+      </div>
+
+      <div id="Polygon" class="tabcontent">
+        <canvas id="matSpreadsChart" width="150" height="75"></canvas>
+        <h2>Adjusted for Gas</h2>
+        <canvas id="matGasSpreadsChart" width="150" height="75"></canvas>
+      </div>
+
+
+      <script type = "text/javascript" src = "script.js" ></script>
+      
+   </body> 
+</html> 
